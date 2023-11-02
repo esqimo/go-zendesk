@@ -1,4 +1,4 @@
-module github.com/nukosuke/go-zendesk
+module github.com/esqimo/go-zendesk
 
 go 1.19
 
