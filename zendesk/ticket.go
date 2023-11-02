@@ -62,6 +62,7 @@ type Ticket struct {
 	RequesterID     int64         `json:"requester_id,omitempty"`
 	SubmitterID     int64         `json:"submitter_id,omitempty"`
 	AssigneeID      int64         `json:"assignee_id,omitempty"`
+	AssigneeEmail   string        `json:"assignee_email,omitempty"`
 	OrganizationID  int64         `json:"organization_id,omitempty"`
 	GroupID         json.Number   `json:"group_id,omitempty"`
 	CollaboratorIDs []int64       `json:"collaborator_ids,omitempty"`
@@ -196,7 +197,6 @@ func (z *Client) GetTickets(ctx context.Context, opts *TicketListOptions) ([]Tic
 	}
 	return data.Tickets, data.Page, nil
 }
-
 
 // GetOrganizationTickets get organization ticket list
 //
